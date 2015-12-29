@@ -1,0 +1,32 @@
+<%- model_class = Post -%>
+
+<% content_for :title do %>
+    <%= "#{t('admin.models.post.many')} | #{@post.title}"  %>
+<% end %>
+
+<% content_for :left_sidebar do %>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <span class="badge"><%= l(@post.published_at, :format => "%d %B %Y г.")  %></span>
+        <%= model_class.human_attribute_name(:published_at) %>
+      </li>
+      <li class="list-group-item">
+        <span class="badge"><%= @post.comments.approved.size %></span>
+        <%= model_class.human_attribute_name(:comments) %>
+      </li>
+    </ul>
+    <%= link_to t('.back', :default => t("helpers.links.back")), posts_path, :class => 'btn btn-default'  %>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @post.title %></h3>
+  </div>
+  <div class="panel-body">
+    <%= @post.body %>
+  </div>
+</div>
+
+<%= render partial: 'comments' %>
+
+

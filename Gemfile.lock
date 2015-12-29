@@ -1,3 +1,101 @@
+GIT
+  remote: git://github.com/activeadmin/activeadmin.git
+  revision: efcddc16bfc05006828a0b311617d9162458ad0f
+  specs:
+    activeadmin (1.0.0.pre2)
+      arbre (~> 1.0, >= 1.0.2)
+      bourbon
+      coffee-rails
+      formtastic (~> 3.1)
+      formtastic_i18n
+      inherited_resources (~> 1.6)
+      jquery-rails
+      jquery-ui-rails
+      kaminari (~> 0.15)
+      rails (>= 3.2, < 5.0)
+      ransack (~> 1.3)
+      sass-rails
+
+GIT
+  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
+  revision: c6893c3db02108bcdee7f8f333531b99806779ac
+  specs:
+    twitter-bootstrap-rails (3.2.2)
+      actionpack (>= 3.1)
+      execjs (>= 2.2.2, >= 2.2)
+      less-rails (>= 2.5.0)
+      railties (>= 3.1)
+
+GIT
+  remote: https://github.com/bogdan/datagrid.git
+  revision: 749b89772df0cabbe3495acd425e99fb770e9b52
+  specs:
+    datagrid (1.4.0)
+      rails (>= 3.2.18)
+
+GIT
+  remote: https://github.com/bokmann/font-awesome-rails.git
+  revision: b733ebbe0c88c35bdf25002d423cd774a8ac2d97
+  specs:
+    font-awesome-rails (4.5.0.0)
+      railties (>= 3.2, < 5.0)
+
+GIT
+  remote: https://github.com/capistrano/capistrano.git
+  revision: 5f043ec9e0b9fd72c444f92d74b7514aa893e31a
+  tag: v3.4.0
+  specs:
+    capistrano (3.4.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+
+GIT
+  remote: https://github.com/greendog/simple-captcha.git
+  revision: da1e160c836ebbb9787202db2d315fdc132f3f81
+  specs:
+    simple_captcha2 (0.3.4)
+      rails (>= 4.1)
+
+GIT
+  remote: https://github.com/hisea/devise-bootstrap-views.git
+  revision: fb18ab6bfca3ebe3a455e2ff575d1de891762915
+  specs:
+    devise-bootstrap-views (0.0.7)
+
+GIT
+  remote: https://github.com/mjbellantoni/formtastic-bootstrap.git
+  revision: cececb84e631b08e5b7ff8504d612f7941afcdd3
+  specs:
+    formtastic-bootstrap (3.1.1)
+      formtastic (>= 3.0)
+
+GIT
+  remote: https://github.com/tablexi/capistrano3-unicorn.git
+  revision: 7ea712c013f4630f6d369e87701ee3013c4d7750
+  specs:
+    capistrano3-unicorn (0.2.1)
+      capistrano (~> 3.1, >= 3.1.0)
+
+PATH
+  remote: vendor/bundle/back_office
+  specs:
+    back_office (0.0.1)
+      activeadmin
+      rails (~> 4.2.5)
+
+PATH
+  remote: vendor/bundle/core
+  specs:
+    core (0.0.1)
+      rails (~> 4.2.5)
+
+PATH
+  remote: vendor/bundle/front_office
+  specs:
+    front_office (0.0.1)
+      rails (~> 4.2.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -36,11 +134,40 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
+    addressable (2.4.0)
+    ancestry (2.1.0)
+      activerecord (>= 3.0.0)
+    arbre (1.0.3)
+      activesupport (>= 3.0.0)
     arel (6.0.3)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
+    bcrypt (3.1.10)
+    bourbon (4.2.6)
+      sass (~> 3.4)
+      thor (~> 0.19)
     builder (3.2.2)
-    byebug (8.2.1)
+    cancancan (1.13.1)
+    capistrano-bundler (1.1.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.1.5)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+    capistrano-sidekiq (0.5.4)
+      capistrano
+      sidekiq (>= 3.4)
+    capybara (2.5.0)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    code_analyzer (0.4.5)
+      sexp_processor
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -48,13 +175,63 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    colored (1.2)
+    combustion (0.5.3)
+      activesupport (>= 3.0.0)
+      railties (>= 3.0.0)
+      thor (>= 0.14.6)
+    commonjs (0.2.7)
     concurrent-ruby (1.0.0)
-    debug_inspector (0.0.2)
+    connection_pool (2.2.0)
+    database_cleaner (1.5.1)
+    devise (3.5.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    diff-lcs (1.2.5)
+    elasticsearch (1.0.15)
+      elasticsearch-api (= 1.0.15)
+      elasticsearch-transport (= 1.0.15)
+    elasticsearch-api (1.0.15)
+      multi_json
+    elasticsearch-transport (1.0.15)
+      faraday
+      multi_json
+    enumerize (1.1.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
+    faker (1.6.1)
+      i18n (~> 0.5)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    foreman (0.78.0)
+      thor (~> 0.19.1)
+    formtastic (3.1.3)
+      actionpack (>= 3.2.13)
+    formtastic_i18n (0.4.1)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    has_scope (0.6.0)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
+    hashie (3.4.3)
     i18n (0.7.0)
+    inherited_resources (1.6.0)
+      actionpack (>= 3.2, < 5)
+      has_scope (~> 0.6.0.rc)
+      railties (>= 3.2, < 5)
+      responders
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -62,7 +239,29 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.5)
+      railties (>= 3.2.16)
     json (1.8.3)
+    kaminari (0.16.3)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    kgio (2.10.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.7.0)
+      actionpack (>= 4.0)
+      less (~> 2.6.0)
+      sprockets (> 2, < 4)
+      tilt
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
+    letter_opener_web (1.3.0)
+      actionmailer (>= 3.2)
+      letter_opener (~> 1.0)
+      railties (>= 3.2)
+    libv8 (3.16.14.13)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -71,9 +270,18 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
+    multipart-post (2.0.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (3.0.1)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
+    orm_adapter (0.5.0)
+    polyamorous (1.3.0)
+      activerecord (>= 3.0)
     rack (1.6.4)
+    rack-protection (1.5.3)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.5)
@@ -95,13 +303,56 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails-i18n (4.0.7)
+      i18n (~> 0.7)
+      railties (~> 4.0)
+    rails_best_practices (1.15.7)
+      activesupport
+      code_analyzer (>= 0.4.3)
+      colored
+      erubis
+      i18n
+      json
+      require_all
+      ruby-progressbar
     railties (4.2.5)
       actionpack (= 4.2.5)
       activesupport (= 4.2.5)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    raindrops (0.15.0)
     rake (10.4.2)
-    rdoc (4.2.0)
+    ransack (1.7.0)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      i18n
+      polyamorous (~> 1.2)
+    redis (3.2.2)
+    ref (2.0.0)
+    require_all (1.3.3)
+    responders (2.1.1)
+      railties (>= 4.2.0, < 5.1)
+    rspec-core (3.4.1)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-rails (3.4.0)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    ruby-progressbar (1.7.5)
+    russian (0.6.0)
+      i18n (>= 0.5.0)
     sass (3.4.20)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -109,10 +360,22 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sdoc (0.4.1)
-      json (~> 1.7, >= 1.7.7)
-      rdoc (~> 4.0)
-    spring (1.6.0)
+    searchkick (1.1.2)
+      activemodel
+      elasticsearch (>= 1)
+      hashie
+    select2-rails (4.0.0)
+      thor (~> 0.14)
+    sexp_processor (4.6.0)
+    sidekiq (4.0.1)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      json (~> 1.0)
+      redis (~> 3.2, >= 3.2.1)
+    sinatra (1.4.6)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -121,38 +384,81 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.11)
+    sshkit (1.8.1)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
-    turbolinks (2.5.3)
-      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    web-console (2.2.1)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
+    unicorn (5.0.1)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    validates_email_format_of (1.6.3)
+      i18n
+    warden (1.2.4)
+      rack (>= 1.0)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
+  activeadmin!
+  acts-as-taggable-on
+  ancestry
+  back_office!
+  cancancan
+  capistrano!
+  capistrano-bundler
+  capistrano-rails
+  capistrano-rvm
+  capistrano-sidekiq
+  capistrano3-unicorn!
+  capybara
   coffee-rails (~> 4.1.0)
+  combustion
+  core!
+  database_cleaner
+  datagrid!
+  devise
+  devise-bootstrap-views!
+  enumerize
+  factory_girl_rails
+  faker
+  font-awesome-rails!
+  foreman
+  formtastic-bootstrap!
+  friendly_id
+  front_office!
   jbuilder (~> 2.0)
   jquery-rails
+  letter_opener_web
   rails (= 4.2.5)
+  rails-i18n
+  rails_best_practices
+  rspec-rails
+  russian
   sass-rails (~> 5.0)
-  sdoc (~> 0.4.0)
-  spring
+  searchkick
+  select2-rails
+  simple_captcha2!
+  sinatra
   sqlite3
-  turbolinks
+  therubyracer
+  twitter-bootstrap-rails!
   uglifier (>= 1.3.0)
-  web-console (~> 2.0)
+  unicorn
+  validates_email_format_of
 
 BUNDLED WITH
    1.10.6

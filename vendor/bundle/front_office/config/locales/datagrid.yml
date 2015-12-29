@@ -1,0 +1,9 @@
+ru:
+  datagrid:
+    form:
+      search: "Поиск"
+      reset: "Сброс"
+    table:
+      order:
+        desc: "↓"
+        asc: "↑"

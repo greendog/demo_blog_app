@@ -1,0 +1,28 @@
+<%= render partial: 'comment_form' %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h3><%= Post.human_attribute_name(:comments) %> <span class="badge"><%= @post.comments.approved.size %></span></h3>
+  </div><!-- /col-sm-12 -->
+</div><!-- /row -->
+
+<% @post.comments.approved.each do |comment| %>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="thumbnail">
+          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+        </div><!-- /thumbnail -->
+      </div><!-- /col-lg-1 -->
+
+      <div class="col-lg-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong><%= comment.email %></strong> <span class="text-muted">commented 5 days ago</span>
+          </div>
+          <div class="panel-body">
+            <%= comment.body %>
+          </div><!-- /panel-body -->
+        </div><!-- /panel panel-default -->
+      </div><!-- /col-lg-5 -->
+    </div><!-- /row -->
+<% end %>

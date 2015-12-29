@@ -1,0 +1,149 @@
+ru:
+  none: "ничего"
+  sign_in: "Войти"
+  sign_out: "Выйти"
+  sign_up: "Регистрация"
+  successfully: "Успешно создан"
+  simple_captcha:
+    refresh_button_text: "Обновить"
+    placeholder: "Введите код с картинки"
+    label: "Введите код с картинки:"
+    message:
+      default: "Введённый код не совпадает с изображением"
+      user: "Ведённый код и изображение отличаются"
+  formtastic:
+    yes: 'Да'
+    no: 'Нет'
+    create: 'Создать %{model}'
+    update: 'Обновить %{model}'
+    submit: 'Подтвердить %{model}'
+    cancel: 'Отменить %{model}'
+    reset: 'Сбросить %{model}'
+    required: 'необходимо'
+  active_admin:
+    dashboard: 'Панель управления'
+    dashboard_welcome:
+      welcome: "Добро пожаловать в панель управления!"
+      call_to_action: "Переходя в соответствующие разделы панели управления в шапке страницы, Вы можете создавать различные записи"
+    devise:
+      username:
+        title: "Имя пользователя"
+      email:
+        title: ""
+      password:
+        title: ""
+      sign_up:
+        title: "Зарегистрироваться"
+        submit: "Зарегистрироваться"
+      login:
+        remember_me: ""
+        submit: "Войти"
+      reset_password:
+        submit: "Сбросить пароль"
+      change_password:
+        title: "Изменение пароля"
+        submit: "Изменение пароля"
+  simple_captcha:
+    refresh_button_text: "Обновить"
+    placeholder: "Введите код с картинки"
+    label: "Введите код с картинки:"
+    message:
+      default: "Введённый код не совпадает с изображением"
+      user: "Ведённый код и изображение отличаются"
+  helpers:
+    submit:
+      create: "Отправить"
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Страница %{entry_name} не найдена"
+          one: "Отображено: <b>1</b>"
+          other: "Отображены <b>все %{count}</b>"
+      more_pages:
+        display_entries: "Отображено <b>%{first}&nbsp;-&nbsp;%{last}</b> из <b>%{total}</b>"
+  views:
+    pagination:
+      first: "&laquo; В начало"
+      last: "В конец &raquo;"
+      previous: "&lsaquo; Предыдущая"
+      next: "Следующая &rsaquo;"
+      truncate: " &hellip;"
+  admin:
+    user_form_title:  "Подробности пользователя"
+    category_form_title:  "Подробности категории"
+    post_form_title:  "Подробности записи"
+    all: "Все"
+    main_fields: 'Основное'
+    basic_details: 'Основная информация'
+    advanced_details: 'Расширенная информация'
+    additional_fields: 'Дополнительное'
+    enter_tags: 'Введите метки'
+    tags: 'Метки'
+    models:
+      user:
+        many: "Пользователи"
+      category:
+        many: "Категории"
+      post:
+        many: "Записи"
+      comment:
+        many: "Комментарии"
+      tag:
+        many: "Метки"
+  enumerize:
+    user:
+      role:
+        admin: "Админ"
+        user: "Пользователь"
+    comment:
+      state:
+        unmoderated: "Новый"
+        approved: "Одобрен"
+        rejected: "Отклонён"
+  activerecord:
+    models:
+      user: "Пользователь"
+      category: "Категория"
+      post: "Запись"
+      comment: "Комментарий"
+    attributes:
+      user:
+        email: "Электронный адрес"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        role: "Роль"
+        current_sign_in_at: 'Последняя дата логина'
+        sign_in_count: 'Счётчик входов в систему'
+        created_at: 'Дата регистрации'
+      category:
+        title: "Заголовок"
+        slug: "Слаг"
+        parent: "Родительская категория"
+        parent_id: "Родительская категория"
+        post_count: "Кол-во записей"
+        created_at: "Дата создания"
+        updated_at: "Дата обновления"
+      post:
+        title: "Заголовок"
+        slug: "Слаг"
+        body: "Текст"
+        draft: "Черновик"
+        published_at: "Дата публикации"
+        categories: "Категории"
+        created_at: "Дата создания"
+        updated_at: "Дата обновления"
+        live: "Опубликовано"
+        drafts: "Черновики"
+        tags: "Метки"
+        comments: "Комментарии"
+      comment:
+        name: "Имя"
+        email: "Эл.адрес"
+        body: "Текст"
+        post: "Запись"
+        state: "Состояние"
+        created_at: "Дата создания"
+        updated_at: "Дата обновления"
+        unmoderated: "Новые"
+        approved: "Одобрено"
+        rejected:  "Отклонено"

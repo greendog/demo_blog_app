@@ -1,0 +1,11 @@
+<% content_for :title do %>
+    <%= t('admin.models.post.many') %>
+<% end %>
+<% content_for :left_sidebar do %>
+    <%= render partial: 'front_office/shared/filters' %>
+<% end %>
+
+<div class="col-lg-12">Найдено: <span class="badge"><%= @grid.assets.total_count %></span> сообщений</div>
+<%= paginate(@grid.assets) %>
+<%= datagrid_table @grid %>
+<%= paginate(@grid.assets) %>

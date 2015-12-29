@@ -1,0 +1,21 @@
+# encoding: UTF-8
+
+require 'capistrano'
+
+namespace :db do
+  desc "Сброс и бутстрап базы"
+
+  task :bootstrap do
+    on roles(:app), in: :sequence, wait: 5 do
+      within release_path do
+        as fetch(:ssh_options, 'user') do
+          with rails_env: fetch(:rails_env) do
+            execute :rake, 'db:drop', "RAILS_ENV=#{fetch(:rails_env)}"
+            execute :rake, 'db:create', "RAILS_ENV=#{fetch(:rails_env)}"
+            execute :rake, 'db:install', "RAILS_ENV=#{fetch(:rails_env)}"
+          end
+        end
+      end
+    end
+  end
+end
