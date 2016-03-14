@@ -44,7 +44,7 @@ ActiveAdmin.register Post do
                   label: I18n.t('admin.models.tag.many'),
                   input_html: {
                      class: 'tags-select form-control', multiple: 'multiple', style: 'width: 75%'
-                  }, collection: f.object.tags.map{|tag| [tag.name, tag.id, {selected: 'selected'}]}
+                  }, collection: f.object.tags.map{|tag| [tag.name, tag.name, {selected: 'selected'}]}
           f.input :draft
         end
 
